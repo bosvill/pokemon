@@ -1,4 +1,5 @@
 import React from 'react'
+import { v4  } from 'uuid'
 import { useLoaderData, Link } from 'react-router-dom'
 
 const PokemonInfo = () => {
@@ -8,7 +9,7 @@ const PokemonInfo = () => {
 			<h3>Pokemon Base:</h3>
 			<ul >
 				{Object.keys(base).map(el => (
-					<li>{el}:  {base[el]}</li>
+					<li key={v4()}>{el}:  {base[el]}</li>
 				))}
 			</ul>
 		</div>

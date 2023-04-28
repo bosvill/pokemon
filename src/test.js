@@ -7,3 +7,5 @@
             </ul>
             {Object.keys(pokemon.base)}: {Object.values(pokemon.base)}
             </>
+
+{pokemon.name.english + pokemon.id} {pokemon.name.english} key={p.name.english}

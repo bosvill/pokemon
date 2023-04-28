@@ -1,5 +1,6 @@
 import React from 'react'
 import Fallback from './Fallback'
+import { v4  } from 'uuid'
 import { useLoaderData, Link, useNavigation } from 'react-router-dom'
 
 const PokemonView = () => {
@@ -12,17 +13,17 @@ const PokemonView = () => {
 			<>
 			<h1>{pokemon.name.english}</h1>
 			<h3>Type:</h3>
-			<ul key={pokemon.name.english + pokemon.id}>
+			<ul >
 				{pokemon.type.map(el => (
-					<li>{el}</li>
+					<li key={v4()}>{el}</li>
 				))}
 			</ul>
 			<Link to={`info`}>
 				<h3>Base:</h3>
 			</Link>
-			<ul key={pokemon.name.english}>
+			<ul >
 				{Object.keys(pokemon.base).map(el => (
-					<li>{el}:  {pokemon.base[el]}</li>
+					<li key={v4()}>{el}:  {pokemon.base[el]}</li>
 				))}
 			</ul>
 			</>}
