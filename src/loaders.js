@@ -32,3 +32,4 @@ export const viewLoader = async ({ params }) => {
 		res.json(e)
 	}
 }
+

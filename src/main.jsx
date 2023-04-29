@@ -14,7 +14,8 @@ import PokemonInfo from './components/PokemonInfo.jsx'
 import ErrorResponse from './components/ErrorResponse.jsx'
 import Fallback from './components/Fallback'
 import Home from './components/Home.jsx'
-import { listLoader, viewLoader, infoLoader } from './loaders'
+import Game from './components/Game'
+import { listLoader, viewLoader, infoLoader, choosePokemon } from './loaders'
 
 const router = createBrowserRouter(
 	createRoutesFromElements(
@@ -23,6 +24,7 @@ const router = createBrowserRouter(
 			<Route path='pokemon' element={<PokemonsList />} loader={listLoader} />
 			<Route path='pokemon/:id' element={<PokemonView />} loader={viewLoader} />
 			<Route path='pokemon/:id/info' element={<PokemonInfo />} loader={infoLoader} />
+			<Route path='play' element={<Game />} />
 		</Route>
 	)
 )
