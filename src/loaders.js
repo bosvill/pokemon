@@ -15,7 +15,7 @@ export const infoLoader = async ({ params }) => {
 	try {
 		const res = await fetch(`https://pokemong.onrender.com/pokemon/${params.id}/info`)
 		const poke = await res.json()
-		//console.log(poke)
+		console.log(poke)
 		return poke
 	} catch (e) {
 		res.json(e)
@@ -32,4 +32,3 @@ export const viewLoader = async ({ params }) => {
 		res.json(e)
 	}
 }
-

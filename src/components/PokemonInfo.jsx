@@ -1,15 +1,18 @@
 import React from 'react'
-import { v4  } from 'uuid'
+import { v4 } from 'uuid'
 import { useLoaderData, Link } from 'react-router-dom'
 
 const PokemonInfo = () => {
-	const base = useLoaderData()
+	const pokemon = useLoaderData()
+	console.log(pokemon.base)
 	return (
 		<div>
 			<h3>Pokemon Base:</h3>
-			<ul >
-				{Object.keys(base).map(el => (
-					<li key={v4()}>{el}:  {base[el]}</li>
+			<ul>
+				{Object.keys(pokemon.base).map(el => (
+					<li key={v4()}>
+						{el}: {pokemon.base[el]}
+					</li>
 				))}
 			</ul>
 		</div>

@@ -15,7 +15,7 @@ import ErrorResponse from './components/ErrorResponse.jsx'
 import Fallback from './components/Fallback'
 import Home from './components/Home.jsx'
 import Game from './components/Game'
-import { listLoader, viewLoader, infoLoader, choosePokemon } from './loaders'
+import { listLoader, viewLoader, infoLoader} from './loaders'
 
 const router = createBrowserRouter(
 	createRoutesFromElements(

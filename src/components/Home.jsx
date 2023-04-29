@@ -2,14 +2,7 @@ import React from 'react'
 import { Link, useLoaderData, Form } from 'react-router-dom'
 
 const Home = () => {
-	const player1 = useLoaderData()
-
-	const player2 = () => {
-		return Math.floor(Math.random() * 809)
-	}
-
-	console.log(player1)
-	console.log(player2)
+	
 
 	return (
 		<>
