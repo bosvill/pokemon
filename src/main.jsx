@@ -10,21 +10,29 @@ import {
 import AppLayout from './AppLayout.jsx'
 import PokemonsList from './components/PokemonsList.jsx'
 import PokemonView from './components/PokemonView.jsx'
-import PokemonInfo from './components/PokemonInfo.jsx'
+import InfoLayout from './components/InfoLayout.jsx'
+import PokemonBase from './components/PokemonInfo'
+import PokemonName from './components/PokemonName'
+import PokemonType from './components/PokemonType'
 import ErrorResponse from './components/ErrorResponse.jsx'
 import Fallback from './components/Fallback'
 import Home from './components/Home.jsx'
-import Game from './components/Game'
-import { listLoader, viewLoader, infoLoader} from './loaders'
+import Game from './components/Game.jsx'
+import { listLoader, viewLoader, infoLoader, gameAction } from './loaders'
+//import {gameAction} from './actions'
 
 const router = createBrowserRouter(
 	createRoutesFromElements(
 		<Route path='/' element={<AppLayout />} errorElement={<ErrorResponse />}>
-			<Route index element={<Home />} />
-			<Route path='pokemon' element={<PokemonsList />} loader={listLoader} />
+			<Route index element={<PokemonsList />} loader={listLoader} />
 			<Route path='pokemon/:id' element={<PokemonView />} loader={viewLoader} />
-			<Route path='pokemon/:id/info' element={<PokemonInfo />} loader={infoLoader} />
-			<Route path='play' element={<Game />} />
+
+			<Route path='pokemon/:id/name' element={<PokemonName />} loader={infoLoader} />
+			<Route path='pokemon/:id/type' element={<PokemonType />} loader={infoLoader} />
+			<Route path='pokemon/:id/base' element={<PokemonBase />} loader={infoLoader} />
+
+			<Route path='play' element={<Game />} loader={gameAction} />
+			<Route path='dashboard' element={<Home />} />
 		</Route>
 	)
 )

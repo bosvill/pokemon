@@ -1,22 +1,29 @@
 import React from 'react'
 import { v4 } from 'uuid'
-import { useLoaderData, Link } from 'react-router-dom'
+import { useLoaderData, useNavigate } from 'react-router-dom'
 
-const PokemonInfo = () => {
+const PokemonBase = () => {
 	const pokemon = useLoaderData()
-	console.log(pokemon.base)
+	const navigate = useNavigate()
+
+	const onBack = () => navigate(-1)
+
 	return (
-		<div>
+		<div className='card'>
 			<h3>Pokemon Base:</h3>
 			<ul>
 				{Object.keys(pokemon.base).map(el => (
 					<li key={v4()}>
-						{el}: {pokemon.base[el]}
+						{el}: <span style={{color: '#d8b054'}}>{pokemon.base[el]}</span>
 					</li>
 				))}
 			</ul>
+
+			<button className='button' onClick={onBack}>
+				Back
+			</button>
 		</div>
 	)
 }
 
-export default PokemonInfo
+export default PokemonBase

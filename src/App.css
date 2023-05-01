@@ -5,10 +5,13 @@
 	padding: 0;
 	display: flex;
 	flex-direction: column;
-	place-items: center;
+	justify-content: space-between;
+	align-items: center;
 }
 .container {
 	max-width: 1280px;
+	display: flex;
+	place-items: center;
 }
 
 .navbar {
@@ -35,9 +38,7 @@
 	filter: drop-shadow(0 0 2em #61dafbaa);
 }
 .fallback-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	justify-self: center;
 }
 
 @keyframes spinner {
@@ -50,10 +51,10 @@
 }
 
 .fallback-spinner {
-	width: 50px;
-	height: 50px;
-	border: 10px solid #a8aef8; /* Light grey */
-	border-top: 10px solid #646cffaa; /* Black */
+	width: 70px;
+	height: 70px;
+	border: 1rem solid #a8aef8;
+	border-top: 1rem solid #646cffaa;
 	border-radius: 50%;
 	animation: spinner 1.5s linear infinite;
 }
@@ -62,9 +63,8 @@
 	font-weight: 500;
 	width: 100%;
 	padding: 2rem;
-	/* position: fixed; */
 	bottom: 0;
-	background-color: #646cffaa;
+	/* background-color: #646cffaa; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -89,7 +89,22 @@
 	padding: 2em;
 }
 
-.players{
+.card li {
+	font-size: 1.2rem;
+	font-weight: 500;
+}
+
+.game {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
+	align-items: center;
+}
+.player {
+	width: 20rem;
+	display: flex;
+	flex-direction: column;
+	place-items: center;
+}
+.stats {
+	width: 20rem;
 }
