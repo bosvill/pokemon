@@ -1,5 +1,4 @@
 import React, { useReducer } from 'react'
-import { reducer, attack } from '../reducer.js'
 import { v4 } from 'uuid'
 
 const Play = ({ stats1, stats2, id, id2 }) => {
