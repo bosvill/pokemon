@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 
 const Fallback = () => {
-    return (
-        <div className='fallback-continer'>
-            <div className="fallback-spinner"></div>
-        </div>
-    );
+	return (
+		<div className='fallback-container'>
+			<div className='fallback-spinner'></div>
+		</div>
+	)
 }
 
-export default Fallback;
+export default Fallback

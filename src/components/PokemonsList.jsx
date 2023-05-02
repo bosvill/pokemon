@@ -1,10 +1,10 @@
 import React from 'react'
-import { v4  } from 'uuid'
+import { v4 } from 'uuid'
 import { useLoaderData, Link } from 'react-router-dom'
 
 const PokemonsList = () => {
 	const pokemons = useLoaderData()
-	console.log(pokemons[0])
+	console.log(pokemons)
 	return (
 		<div className='list'>
 			<ul>
