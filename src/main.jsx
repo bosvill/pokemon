@@ -7,7 +7,7 @@ import {
 	RouterProvider,
 	Route
 } from 'react-router-dom'
-import AppLayout from './AppLayout.jsx'
+import App from './App.jsx'
 import PokemonsList from './components/PokemonsList.jsx'
 import PokemonView from './components/PokemonView.jsx'
 import InfoLayout from './components/InfoLayout.jsx'
@@ -23,7 +23,7 @@ import { listLoader, viewLoader, infoLoader, gameAction } from './loaders'
 
 const router = createBrowserRouter(
 	createRoutesFromElements(
-		<Route path='/' element={<AppLayout />} errorElement={<ErrorResponse />}>
+		<Route path='/' element={<App />} errorElement={<ErrorResponse />}>
 			<Route index element={<PokemonsList />} loader={listLoader} />
 			<Route path='pokemon/:id' element={<PokemonView />} loader={viewLoader} />
 

@@ -1,6 +1,5 @@
 :root {
 	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-	line-height: 1.5;
 	font-weight: 400;
 
 	color-scheme: light dark;
@@ -31,19 +30,19 @@ li {
 }
 
 li:last-child {
-	margin-bottom: 2rem;
+	margin-bottom: 1.5rem;
 }
-body {
+/* body {
 	margin: 0;
 	display: flex;
 	place-items: center;
 	min-width: 320px;
 	min-height: 100vh;
-}
+} */
 
 h1 {
-	font-size: 3.2em;
-	line-height: 1.1;
+	font-size: 3rem;
+	/* line-height: 1.1; */
 }
 
 h3 {
@@ -61,6 +60,7 @@ button {
 	color: #d8b054;
 	cursor: pointer;
 	transition: border-color 0.25s;
+	margin-top: 0.5rem;
 }
 button:hover {
 	border-color: #646cff;

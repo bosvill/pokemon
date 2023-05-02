@@ -4,7 +4,7 @@ import { Outlet, NavLink } from 'react-router-dom'
 
 function App() {
 	return (
-		<>
+		<div className='main-container'>
 			<nav className='navbar'>
 				<NavLink to='/' end>
 					<div className='navbar'>
@@ -16,9 +16,8 @@ function App() {
 			<div className='container'>
 				<Outlet />
 			</div>
-
 			<footer className='footer'>group4@project.com</footer>
-		</>
+		</div>
 	)
 }
 

@@ -1,5 +1,5 @@
-import { json } from 'react-router-dom'
 const url = `https://pokemong.onrender.com/pokemon/`
+
 export const listLoader = async () => {
 	try {
 		const res = await fetch(url)
@@ -27,15 +27,11 @@ export const viewLoader = async ({ params }) => {
 	try {
 		const res = await fetch(`https://pokemong.onrender.com/pokemon/${params.id}`)
 		const poke = await res.json()
-		//console.log(poke)
 		return poke
 	} catch (e) {
 		res.json(e)
 	}
 }
-
-const id2 = Math.floor(Math.random() * 809)
-console.log(id2)
 
 export const getPlayers = async (id, id2) => {
 	try {
@@ -54,10 +50,7 @@ export const gameAction = async ({ request }) => {
 	console.log(request)
 	let url = new URL(request.url)
 	let id = url.searchParams.get('id')
-	/* let id2 = url.searchParams.get("id2");
-	console.log(id1, id2)
-    return getPlayers({id1, id2}); */
-	console.log(id)
-	console.log(typeof id)
+	let id2 = url.searchParams.get('id2')
+	console.log(id, id2)
 	return getPlayers(id, id2)
 }
